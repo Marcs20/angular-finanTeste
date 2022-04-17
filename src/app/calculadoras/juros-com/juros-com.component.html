@@ -1,0 +1,20 @@
+<h1>Juros Compostos</h1>
+
+<p>Capital Inicial:</p>
+<input class="form-control" type="number" [(ngModel)]="c" />
+
+<p>Taxa mensal:</p>
+<input class="form-control" type="number" [(ngModel)]="i" />
+
+<p>Período de Tempo em meses:</p>
+<input class="form-control" type="number" [(ngModel)]="t" />
+<p class="result"><b>Resultados:</b></p>
+<table *ngFor="let item of getJurosComp(); index as x">
+  <tr>
+    <td class="boxM">Mês {{ x + 1 }}:</td>
+    <td></td>
+    <td></td>
+    <td class="boxV">Valor R$ {{ item }}</td>
+  </tr>
+  <br />
+</table>
