@@ -31,7 +31,7 @@ import { RegistrationComponent } from './registration/registration.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'mostrar', component: MostrarComponent },
       { path: 'adicionar', component: AdicionarComponent },
       { path: 'editar', component: EditarComponent },
@@ -42,7 +42,7 @@ import { RegistrationComponent } from './registration/registration.component';
       { path: 'cotacao', component: CotacaoComponent },
       { path: 'juroscom', component: JurosComComponent },
       { path: 'jurossim', component: JurosSimComponent },
-      { path: 'login', component: LoginComponent },
+      { path: '', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
     ]),
   ],
