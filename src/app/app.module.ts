@@ -24,6 +24,7 @@ import { CotacaoService } from './service/cotacao.service';
 import { SaldoService } from './service/saldo.service';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationService } from './service/registration.service';
 
 @NgModule({
   imports: [
@@ -65,6 +66,12 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [FinancaService, ChartService, CotacaoService, SaldoService],
+  providers: [
+    FinancaService,
+    ChartService,
+    CotacaoService,
+    SaldoService,
+    RegistrationService,
+  ],
 })
 export class AppModule {}
