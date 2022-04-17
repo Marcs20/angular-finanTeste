@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   loginUser() {
     this._service.loginUserFromRemote(this.user).subscribe(
-      data => console.log("response received"),
-      error => console.log("exception occured")
+      (data) => console.log('response received'),
+      (error) => console.log('exception occured')
     );
   }
 
