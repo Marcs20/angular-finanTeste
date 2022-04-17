@@ -8,6 +8,8 @@
       placeholder="Enter email"
       name="emailId"
       [(ngModel)]="user.emailId"
+      #email="ngModel"
+      [class.id-invalid]="email.invalid && email.touched"
     />
     <small class="text-danger">{{ msg }}</small>
   </div>
