@@ -22,6 +22,8 @@ import { JurosComComponent } from './calculadoras/juros-com/juros-com.component'
 import { JurosSimComponent } from './calculadoras/juros-sim/juros-sim.component';
 import { CotacaoService } from './service/cotacao.service';
 import { SaldoService } from './service/saldo.service';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   imports: [
@@ -40,6 +42,8 @@ import { SaldoService } from './service/saldo.service';
       { path: 'cotacao', component: CotacaoComponent },
       { path: 'juroscom', component: JurosComComponent },
       { path: 'jurossim', component: JurosSimComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegistrationComponent },
     ]),
   ],
   declarations: [
@@ -57,6 +61,8 @@ import { SaldoService } from './service/saldo.service';
     CotacaoComponent,
     JurosComComponent,
     JurosSimComponent,
+    LoginComponent,
+    RegistrationComponent,
   ],
   bootstrap: [AppComponent],
   providers: [FinancaService, ChartService, CotacaoService, SaldoService],
