@@ -9,7 +9,7 @@
       name="emailId"
       [(ngModel)]="user.emailId"
       #email="ngModel"
-      [class.id-invalid]="email.invalid && email.touched"
+      required
     />
     <small class="text-danger">{{ msg }}</small>
   </div>
@@ -29,3 +29,4 @@
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
+<small class="float-right" (click)="register()">Novo? cadastre-se aqui</small>
