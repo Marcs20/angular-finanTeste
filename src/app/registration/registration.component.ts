@@ -14,8 +14,6 @@ export class RegistrationComponent implements OnInit {
     private _router: Router
   ) {}
 
-  user = new User();
-
   registerUser() {}
 
   ngOnInit() {}
