@@ -10,4 +10,8 @@ export class RegistrationService {
   public loginUserFromRemote(user: User): Observable<any> {
     return this._http.post<any>('https://aplica1.herokuapp.com/login', user);
   }
+
+  public registerUserFromRemote(user: User): Observable<any> {
+    return this._http.post<any>('https://aplica1.herokuapp.com/login', user);
+  }
 }
