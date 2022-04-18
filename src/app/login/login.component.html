@@ -1,14 +1,14 @@
-<form #loginform="ngForm" (ngSubmit)="loginUser()">
+<form #loginform="ngForm" (ngSubmit)="_service.loginUser()">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label><br />
-    <small class="text-danger">{{ msg }}</small>
+    <small class="text-danger">{{ _service.msg }}</small>
     <input
       type="email"
       class="form-control"
       aria-describedby="emailHelp"
       placeholder="Enter email"
       name="emailId"
-      [(ngModel)]="user.emailId"
+      [(ngModel)]="_service.user.emailId"
       #email="ngModel"
       required
       [class.is-invalid]="email.invalid && email.touched"
@@ -25,7 +25,7 @@
       placeholder="Password"
       name="password"
       #password="ngModel"
-      [(ngModel)]="user.password"
+      [(ngModel)]="_service.user.password"
       required
       [class.is-invalid]="password.invalid && password.touched"
     />

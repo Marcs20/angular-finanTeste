@@ -10,24 +10,9 @@ import { RegistrationService } from '../service/registration.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private _service: RegistrationService, private _router: Router) {}
+  constructor(public _service: RegistrationService) {}
 
-  user = new User();
-
-  msg = '';
-
-  loginUser() {
-    this._service.loginUserFromRemote(this.user).subscribe(
-      (data) => {
-        console.log('received');
-        this._router.navigate(['/home']);
-      },
-      (error) => {
-        console.log('exception');
-        this.msg = 'bad credentials';
-      }
-    );
-  }
-
+  
+  
   ngOnInit() {}
 }
