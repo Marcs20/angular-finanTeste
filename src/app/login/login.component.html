@@ -1,52 +1,51 @@
-<form #loginform="ngForm" (ngSubmit)="_service.loginUser()">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label><br />
-    <small class="text-danger">{{ _service.msg }}</small>
-    <input
-      type="email"
-      class="form-control"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
-      name="emailId"
-      [(ngModel)]="_service.user.emailId"
-      #email="ngModel"
-      required
-      [class.is-invalid]="email.invalid && email.touched"
-    />
-    <small class="text-danger" [class.d-none]="email.valid || email.untouched"
-      >Email is required</small
+<div class="form-box">
+  <form #loginform="ngForm" (ngSubmit)="_service.loginUser()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label><br />
+      <small class="text-danger">{{ _service.msg }}</small>
+      <input
+        type="email"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        name="emailId"
+        [(ngModel)]="_service.user.emailId"
+        #email="ngModel"
+        required
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched"
+        >Email is required</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="_service.user.password"
+        required
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="password.valid || password.untouched"
+        >password is required</small
+      >
+    </div>
+    <br />
+    <button
+      [disabled]="loginform.form.invalid"
+      type="submit"
+      class="btn btn-primary"
     >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      placeholder="Password"
-      name="password"
-      #password="ngModel"
-      [(ngModel)]="_service.user.password"
-      required
-      [class.is-invalid]="password.invalid && password.touched"
-    />
-    <small
-      class="text-danger"
-      [class.d-none]="password.valid || password.untouched"
-      >password is required</small
-    >
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button
-    [disabled]="loginform.form.invalid"
-    type="submit"
-    class="btn btn-primary"
+      Login
+    </button>
+  </form>
+  <small class="float-right" [routerLink]="['/register']"
+    >Novo? cadastre-se aqui</small
   >
-    Login
-  </button>
-</form>
-<small class="float-right" [routerLink]="['/register']"
-  >Novo? cadastre-se aqui</small
->
+</div>

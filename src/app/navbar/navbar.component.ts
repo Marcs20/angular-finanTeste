@@ -11,7 +11,7 @@ import { SaldoService } from '../service/saldo.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(public saldoService: SaldoService, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 }

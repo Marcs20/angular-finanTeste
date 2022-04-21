@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Lancamento } from '../model/lancamento';
+import { Receita } from '../model/receita';
 
 @Injectable()
 export class FinancaService {
@@ -32,25 +33,25 @@ export class FinancaService {
 
   url2 = 'https://aplica1.herokuapp.com/receita';
 
-  lancamento2: Lancamento[] = [];
+  lancamento2: Receita[] = [];
 
   getLancamento2() {
-    return this.http.get<Lancamento[]>(this.url2);
+    return this.http.get<Receita[]>(this.url2);
   }
 
   getID2(id: number) {
-    return this.http.get<Lancamento>(this.url2 + '/' + id);
+    return this.http.get<Receita>(this.url2 + '/' + id);
   }
 
-  update2(lanca: Lancamento) {
-    return this.http.put<Lancamento>(this.url2 + '/' + lanca.id, lanca);
+  update2(rece: Receita) {
+    return this.http.put<Receita>(this.url2 + '/' + rece.id, rece);
   }
 
-  add2(lanca: Lancamento) {
-    return this.http.post<Lancamento>(this.url2, lanca);
+  add2(rece: Receita) {
+    return this.http.post<Receita>(this.url2, rece);
   }
 
-  delete2(lanca: Lancamento) {
-    return this.http.delete<Lancamento>(this.url2 + '/' + lanca.id);
+  delete2(rece: Receita) {
+    return this.http.delete<Receita>(this.url2 + '/' + rece.id);
   }
 }
