@@ -25,6 +25,7 @@ import { SaldoService } from './service/saldo.service';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationService } from './service/registration.service';
+import { AuthGdGuard } from './guards/auth-gd.guard';
 
 @NgModule({
   imports: [
@@ -32,17 +33,57 @@ import { RegistrationService } from './service/registration.service';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'home', component: HomeComponent },
-      { path: 'mostrar', component: MostrarComponent },
-      { path: 'adicionar', component: AdicionarComponent },
-      { path: 'editar', component: EditarComponent },
-      { path: 'adicionarreceita', component: AdicionarreceitaComponent },
-      { path: 'editarreceita', component: EditarreceitaComponent },
-      { path: 'mostrarreceita', component: MostrarreceitaComponent },
-      { path: 'calcpg', component: CalcpgComponent },
-      { path: 'cotacao', component: CotacaoComponent },
-      { path: 'juroscom', component: JurosComComponent },
-      { path: 'jurossim', component: JurosSimComponent },
+      { path: 'home', component: HomeComponent, canActivate: [AuthGdGuard] },
+      {
+        path: 'mostrar',
+        component: MostrarComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'adicionar',
+        component: AdicionarComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'editar',
+        component: EditarComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'adicionarreceita',
+        component: AdicionarreceitaComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'editarreceita',
+        component: EditarreceitaComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'mostrarreceita',
+        component: MostrarreceitaComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'calcpg',
+        component: CalcpgComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'cotacao',
+        component: CotacaoComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'juroscom',
+        component: JurosComComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
+        path: 'jurossim',
+        component: JurosSimComponent,
+        canActivate: [AuthGdGuard],
+      },
       { path: '', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
     ]),
@@ -68,6 +109,7 @@ import { RegistrationService } from './service/registration.service';
   bootstrap: [AppComponent],
   providers: [
     FinancaService,
+    AuthGdGuard,
     ChartService,
     CotacaoService,
     SaldoService,

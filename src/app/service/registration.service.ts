@@ -13,6 +13,7 @@ export class RegistrationService {
   }
 
   showNavBar = new EventEmitter<boolean>();
+  private userAuth: boolean = false;
 
   user = new User();
   msg = '';
@@ -21,15 +22,21 @@ export class RegistrationService {
     this.loginUserFromRemote(this.user).subscribe(
       (data) => {
         console.log('received');
+        this.userAuth = true;
         this.showNavBar.emit(true);
         this._router.navigate(['/home']);
       },
       (error) => {
         console.log('exception');
+        this.userAuth = false;
         this.showNavBar.emit(false);
         this.msg = 'bad credentials';
       }
     );
+  }
+
+  authTrue() {
+    return this.userAuth;
   }
 
   public registerUserFromRemote(user: User): Observable<any> {
