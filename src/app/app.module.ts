@@ -26,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationService } from './service/registration.service';
 import { AuthGdGuard } from './guards/auth-gd.guard';
+import { RelatorioComponent } from './relatorio/relatorio.component';
 
 @NgModule({
   imports: [
@@ -84,6 +85,11 @@ import { AuthGdGuard } from './guards/auth-gd.guard';
         component: JurosSimComponent,
         canActivate: [AuthGdGuard],
       },
+      {
+        path: 'relatorio',
+        component: RelatorioComponent,
+        canActivate: [AuthGdGuard],
+      },
       { path: '', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
     ]),
@@ -105,6 +111,7 @@ import { AuthGdGuard } from './guards/auth-gd.guard';
     JurosSimComponent,
     LoginComponent,
     RegistrationComponent,
+    RelatorioComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
