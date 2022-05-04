@@ -89,6 +89,11 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
         component: RelatorioComponent,
         canActivate: [AuthGdGuard],
       },
+      {
+        path: 'navbar',
+        component: NavbarComponent,
+        canActivate: [AuthGdGuard],
+      },
       { path: '', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
     ]),

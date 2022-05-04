@@ -34,6 +34,8 @@ export class NavbarComponent implements OnInit {
     return n;
   }
 
+  
+
   ngOnInit() {
     this.service.getLancamento().subscribe((data) => (this.despesa = data));
     this.service.getLancamento2().subscribe((data) => (this.receita = data));
