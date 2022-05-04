@@ -27,7 +27,7 @@ export class MostrarComponent implements OnInit {
     });
   }
 
-  public getSum() {
+  getSum() {
     let n = 0;
     for (let i = 0; i < this.lancamento.length; i++) {
       n = n + this.lancamento[i].valor;
