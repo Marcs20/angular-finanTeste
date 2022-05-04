@@ -12,9 +12,7 @@ import { FinancaService } from '../service/financa.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private router: Router, public sum: MostrarComponent) {
-    sum.getSum();
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 }
