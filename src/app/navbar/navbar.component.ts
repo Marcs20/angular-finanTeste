@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { Lancamento } from '../model/lancamento';
 import { FinancaService } from '../service/financa.service';
-import { SaldoService } from '../service/saldo.service';
 
 @Component({
   selector: 'app-navbar',
