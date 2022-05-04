@@ -1,6 +1,12 @@
 ul {
   list-style-type: none;
 }
+
+.title {
+  color: rgb(136, 135, 135);
+  text-decoration: none;
+}
+
 li {
   float: left;
   margin-left: 20px;
