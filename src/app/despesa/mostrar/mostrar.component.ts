@@ -19,6 +19,7 @@ export class MostrarComponent implements OnInit {
   ) {}
 
   lancamento: Lancamento[] = [];
+  
 
   delete(lanca: Lancamento) {
     this.service.delete(lanca).subscribe((data) => {
