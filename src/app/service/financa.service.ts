@@ -54,4 +54,23 @@ export class FinancaService {
   delete2(rece: Receita) {
     return this.http.delete<Receita>(this.url2 + '/' + rece.id);
   }
+
+  //Saldo code
+
+  dataList: Array<Lancamento> = [];
+  dataList2: Array<Lancamento> = [];
+
+  getDesp() {
+    this.http
+      .get<Lancamento>('https://aplica1.herokuapp.com/lancamento')
+      .subscribe((data) => this.dataList.push(data));
+  }
+
+  getRece() {
+    this.http
+      .get<Lancamento>('https://aplica1.herokuapp.com/receita')
+      .subscribe((data) => this.dataList2.push(data));
+  }
+
+  saldo: number = 0;
 }

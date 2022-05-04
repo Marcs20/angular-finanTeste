@@ -21,7 +21,6 @@ import { CotacaoComponent } from './cotacao/cotacao.component';
 import { JurosComComponent } from './calculadoras/juros-com/juros-com.component';
 import { JurosSimComponent } from './calculadoras/juros-sim/juros-sim.component';
 import { CotacaoService } from './service/cotacao.service';
-import { SaldoService } from './service/saldo.service';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationService } from './service/registration.service';
@@ -119,7 +118,6 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
     AuthGdGuard,
     ChartService,
     CotacaoService,
-    SaldoService,
     RegistrationService,
   ],
 })
