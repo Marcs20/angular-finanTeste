@@ -58,16 +58,12 @@ export class FinancaService {
   //Saldo code
 
   dataL: Array<Lancamento> = [];
-  dataR: Array<Lancamento> = [];
+  dataR: Array<Receita> = [];
 
   getDesp() {
     this.http
       .get<Lancamento>('https://aplica1.herokuapp.com/lancamento')
       .subscribe((data) => this.dataL.push(data));
-  }
-
-  getValueL() {
-    return this.saldo = this.dataL[length].valor + this.dataR[length].valor;
   }
 
   getRece() {

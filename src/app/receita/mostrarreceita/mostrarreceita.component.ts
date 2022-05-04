@@ -20,6 +20,14 @@ export class MostrarreceitaComponent implements OnInit {
     });
   }
 
+  getSum() {
+    let n = 0;
+    for (let i = 0; i < this.lancamento.length; i++) {
+      n = n + this.lancamento[i].valor;
+    }
+    return n;
+  }
+
   update(lanca: Lancamento): void {
     localStorage.setItem('id', lanca.id.toString());
     this.router.navigate(['editarreceita']);
