@@ -18,3 +18,12 @@ label {
   cursor: pointer;
   color: red;
 }
+
+.title1 {
+  text-align: center;
+  margin-top: 10%;
+  font-weight: bolder;
+  color: rgb(99, 98, 98);
+  font-style: italic;
+
+}
