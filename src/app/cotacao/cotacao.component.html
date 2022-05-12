@@ -1,14 +1,7 @@
 <h1>Cotação</h1>
 
-<table>
-  <thead>
-    <th>Dolár/Real</th>
-    <th>Euro/Real</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td> -- </td>
-      <td> -- </td>
-    </tr>
-  </tbody>
-</table>
+<div *ngIf="cryptos">
+  <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)"></div>
+  <span class="left">{{ crypto }}</span>
+  <span class="right">{{ cryptos[crypto].USD | currency: 'USD':true }}</span>
+</div>

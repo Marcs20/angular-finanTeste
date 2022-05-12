@@ -7,7 +7,16 @@ import { CotacaoService } from '../service/cotacao.service';
   styleUrls: ['./cotacao.component.css'],
 })
 export class CotacaoComponent implements OnInit {
-  constructor(public coin: CotacaoService) {}
+  constructor(private coin: CotacaoService) {}
 
-  ngOnInit() {}
+  objectKeys =  Object.keys;
+
+  cryptos: any;
+
+  ngOnInit() {
+    this.coin.getPrices().subscribe((res) => {
+      this.cryptos = res;
+      console.log(res);
+    });
+  }
 }

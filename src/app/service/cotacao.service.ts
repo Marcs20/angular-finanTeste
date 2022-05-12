@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { Cotacao } from '../model/cotacao';
 
 @Injectable()
@@ -10,11 +11,17 @@ export class CotacaoService {
     }, 10000);
   }
 
+  results:any 
+
   coin: Array<Cotacao> = [];
 
   getUSD() {
     let len = this.coin.length;
     return this.coin[len].USD.high;
+  }
+
+  getPrices(){
+    return this.http.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT&tsyms=USD').pipe(map(data => this.results = data))
   }
 
   updatePrice() {
