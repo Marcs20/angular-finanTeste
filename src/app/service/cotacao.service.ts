@@ -21,7 +21,7 @@ export class CotacaoService {
   }
 
   getPrices(){
-    return this.http.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT&tsyms=USD').pipe(map(data => this.results = data))
+    return this.http.get('https://economia.awesomeapi.com.br/last/USD-BRL').pipe(map(data => this.results = data))
   }
 
   updatePrice() {
