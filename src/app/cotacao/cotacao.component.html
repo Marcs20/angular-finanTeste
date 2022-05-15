@@ -1,8 +1,8 @@
-<h1>Cotação</h1>
+<h1 class="title">Cotação</h1>
 
 <div *ngIf="cryptos">
   <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
-    <!--<span class="left">{{ crypto }}</span>-->
-    <span class="right">USD/BRL{{ cryptos[crypto].bid  }}</span>
+    <span class="coin-name">{{ crypto }}</span>
+    <span class="coin-price">{{ cryptos[crypto].bid  }}</span>
   </div>
 </div>

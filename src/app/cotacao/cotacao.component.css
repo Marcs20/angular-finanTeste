@@ -1,9 +1,18 @@
-th {
-  background-color: greenyellow;
-  border-radius: 5px;
+.title {
+  text-align: center;
 }
 
-tr {
-  background-color: rgb(209, 209, 208);
-  border-radius: 5px;
+div#crypto-container {
+  background: rgb(230, 228, 228);
+  font-weight: bold;
+  border-radius: 3px;
+  width: 70%;
+  margin: 0 auto 4px auto;
+  padding: 1em;
+  box-shadow: 1px 1px 0 lightgrey;
+}
+
+.coin-price {
+  float: right;
+  color: green;
 }

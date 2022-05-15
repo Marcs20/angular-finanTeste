@@ -11,7 +11,7 @@ export class CotacaoService {
     }, 10000);
   }
 
-  results:any 
+  results: any;
 
   coin: Array<Cotacao> = [];
 
@@ -20,8 +20,10 @@ export class CotacaoService {
     return this.coin[len].USD.high;
   }
 
-  getPrices(){
-    return this.http.get('https://economia.awesomeapi.com.br/last/USD-BRL').pipe(map(data => this.results = data))
+  getPrices() {
+    return this.http
+      .get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL')
+      .pipe(map((data) => (this.results = data)));
   }
 
   updatePrice() {
