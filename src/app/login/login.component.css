@@ -1,6 +1,6 @@
 .form-box {
   background-color: rgb(243, 239, 239);
-  margin: 10% 20%;
+  margin: 5% 20%;
   padding: 5%;
   border-radius: 10px;
   box-shadow: grey 5px 5px;
@@ -21,9 +21,8 @@ label {
 
 .title1 {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   font-weight: bolder;
   color: rgb(99, 98, 98);
   font-style: italic;
-
 }
