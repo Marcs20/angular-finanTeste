@@ -9,12 +9,15 @@
 <p>Período de Tempo em meses:</p>
 <input class="form-control" type="number" [(ngModel)]="t" />
 <p class="result"><b>Resultados:</b></p>
-<table *ngFor="let item of getJurosComp(); index as x">
+<table class="table table-bordered">
   <tr>
-    <td class="boxM">Mês {{ x + 1 }}:</td>
-    <td></td>
-    <td></td>
-    <td class="boxV">Valor R$ {{ item }}</td>
+    <th>Mês</th>
+    <th>Valor</th>
   </tr>
-  <br />
+  <tbody>
+    <tr *ngFor="let item of getJurosComp(); index as x">
+      <td>{{ x + 1 }}</td>
+      <td>R$ {{ item }}</td>
+    </tr>
+  </tbody>
 </table>
