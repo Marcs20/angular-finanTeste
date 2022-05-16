@@ -3,6 +3,6 @@
 <div *ngIf="cryptos">
   <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
     <span class="coin-name">{{ crypto }}</span>
-    <span class="coin-price">{{ cryptos[crypto].bid  }}</span>
+    <span class="coin-price">{{ cryptos[crypto].ask }}</span>
   </div>
 </div>
