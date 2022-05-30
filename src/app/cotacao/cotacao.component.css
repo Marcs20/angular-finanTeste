@@ -16,3 +16,12 @@ div#crypto-container {
   float: right;
   color: green;
 }
+
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.text{
+  font-weight: bold;
+}
