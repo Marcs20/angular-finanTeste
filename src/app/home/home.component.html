@@ -10,33 +10,37 @@
 <h2 class="text-center">O que fazer ?</h2>
 
 <div class="d-flex flex-row mb-3">
-  <div class="p-2">
-    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">
-        <b>Tenho gastos</b> | <i class="bi bi-coin"></i>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Registre seus gastos</h5>
-        <p class="card-text">
-          Começe a registrar seus gastos, com compras, contas e outros
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="p-2">
-    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">
-        <b>Tenho ganhos</b> | <i class="bi bi-coin"></i>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Registre seus ganhos</h5>
-        <p class="card-text">
-          Começe a registrar suas receitas, sálario, investimentos, presentes e
-          outros
-        </p>
+  <a class="nav-link" [routerLink]="['/mostrar']">
+    <div class="p-2">
+      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <b>Tenho gastos</b> | <i class="bi bi-coin"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Registre seus gastos</h5>
+          <p class="card-text">
+            Começe a registrar seus gastos, com compras, contas e outros.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
+  <a class="nav-link" [routerLink]="['/mostrarreceita']">
+    <div class="p-2">
+      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <b>Tenho ganhos</b> | <i class="bi bi-coin"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Registre seus ganhos</h5>
+          <p class="card-text">
+            Começe a registrar suas receitas, sálario, investimentos, presentes
+            e outros.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
   <div class="p-2">
     <div class="card text-bg-light mb-3" style="max-width: 18rem;">
       <div class="card-header"><b>Consultas</b></div>
