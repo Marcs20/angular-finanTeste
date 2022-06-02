@@ -7,6 +7,25 @@
   margin-right: 10px;
 }
 
+.res-box {
+  background-color: aliceblue;
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.label-res {
+  text-align: center;
+  font-weight: bold;
+}
+.res {
+  margin-top: 50%;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-weight: bold;
+}
+
 .boxV {
   background-color: rgb(37, 186, 197);
   padding: 8px;

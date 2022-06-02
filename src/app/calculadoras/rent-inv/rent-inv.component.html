@@ -7,14 +7,8 @@
 <input class="form-control" type="number" [(ngModel)]="c" />
 
 <p class="result"><b>Resultados:</b></p>
-<table class="table table-bordered">
-  <tr>
-    <th>Valor</th>
-    <th>()</th>
-  </tr>
-  <tbody>
-    <tr>
-      <td>{{ getJurosComp() }}</td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="res-box">
+  <div class="label-res">Valor</div>
+  <div *ngIf="getJurosComp()" class="res">{{ getJurosComp() }}%</div>
+</div>
