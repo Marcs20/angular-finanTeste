@@ -1,22 +1,20 @@
 <h1>Rentabilidade de investimento</h1>
 
-<p>Capital Inicial:</p>
-<input class="form-control" type="number" [(ngModel)]="c" />
-
-<p>Taxa de juros (Rentabilidade):</p>
+<p>Valor investido:</p>
 <input class="form-control" type="number" [(ngModel)]="i" />
 
-<p>Período de Tempo em meses:</p>
-<input class="form-control" type="number" [(ngModel)]="t" />
+<p>Valor de renda:</p>
+<input class="form-control" type="number" [(ngModel)]="c" />
+
 <p class="result"><b>Resultados:</b></p>
 <table class="table table-bordered">
   <tr>
-    <th>Mês</th>
     <th>Valor</th>
+    <th>()</th>
   </tr>
   <tbody>
     <tr>
-      <td>{{ m }}</td>
+      <td>{{ getJurosComp() }}</td>
     </tr>
   </tbody>
 </table>

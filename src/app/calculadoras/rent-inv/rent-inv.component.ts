@@ -16,9 +16,7 @@ export class RentInvComponent implements OnInit {
   ngOnInit() {}
 
   getJurosComp() {
-    for (let x = 1; x <= this.t; x++) {
-      this.m = this.c * (1 + this.i) ** x;
-    }
-    return this.m;
+    return this.m = this.c *100/ this.i
+
   }
 }
