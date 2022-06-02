@@ -2,36 +2,47 @@
   <h1>Resumo rápido <i class="bi bi-cash"></i></h1>
 </div>
 
+<h2>Despesas</h2>
+
 <section class="flex">
   <div class="box1">
-    <h2>Maior despesa:</h2>
+    <p>Maior despesa:</p>
     <p class="res">R$ {{ getMax() }}</p>
   </div>
 
   <div class="box1">
-    <h2>Quantidade de despesas:</h2>
+    <p>Quantidade de despesas:</p>
     <p class="res">{{ quantidadeDe() }}</p>
   </div>
 
   <div class="box1">
-    <h2>Menor despesa:</h2>
+    <p>Menor despesa:</p>
     <p class="res">R$ {{ getMin() }}</p>
+  </div>
+  <div class="box1">
+    <p>Total</p>
+    <p class="res">{{ getSumDe() }}</p>
   </div>
 </section>
 
+<h2>Receita</h2>
 <section class="flex">
   <div class="box1">
-    <h2>Quantidade de receitas:</h2>
+    <p>Quantidade de receitas:</p>
     <p class="res">{{ quantidadeDe() }}</p>
   </div>
 
   <div class="box1">
-    <h2>Maior receita:</h2>
+    <p>Maior receita:</p>
     <p class="res">R$ {{ getMax2() }}</p>
   </div>
 
   <div class="box1">
-    <h2>Menor receita:</h2>
+    <p>Menor receita:</p>
     <p class="res">R$ {{ getMin2() }}</p>
+  </div>
+  <div class="box1">
+    <p>Total</p>
+    <p class="res">{{ getSumRe() }}</p>
   </div>
 </section>

@@ -23,6 +23,21 @@ export class RelatorioComponent implements OnInit {
     }
     return this.countD;
   }
+  getSumDe() {
+    let n = 0;
+    for (let i = 0; i < this.despesa.length; i++) {
+      n = n + this.despesa[i].valor;
+    }
+    return n;
+  }
+
+  getSumRe() {
+    let n = 0;
+    for (let i = 0; i < this.receita.length; i++) {
+      n = n + this.receita[i].valor;
+    }
+    return n;
+  }
 
   quantidadeRe() {
     for (let i = 0; i < this.despesa.length; i++) {
