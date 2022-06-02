@@ -40,7 +40,7 @@ export class RelatorioComponent implements OnInit {
   }
 
   quantidadeRe() {
-    for (let i = 0; i < this.despesa.length; i++) {
+    for (let i = 0; i < this.receita.length; i++) {
       this.countR = i + 1;
     }
     return this.countR;
