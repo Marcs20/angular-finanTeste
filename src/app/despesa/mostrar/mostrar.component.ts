@@ -19,13 +19,21 @@ export class MostrarComponent implements OnInit {
   ) {}
 
   lancamento: Lancamento[] = [];
-  
 
   delete(lanca: Lancamento) {
     this.service.delete(lanca).subscribe((data) => {
       this.lancamento = this.lancamento.filter((l) => l !== lanca);
       alert('deletado!');
     });
+  }
+
+  count = 0;
+
+  quantidade() {
+    for (let i = 0; i < this.lancamento.length; i++) {
+      this.count = i +1
+    }
+    return this.count;
   }
 
   getSum() {

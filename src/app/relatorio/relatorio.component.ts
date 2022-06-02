@@ -14,6 +14,23 @@ export class RelatorioComponent implements OnInit {
   despesa: Lancamento[] = [];
   receita: Receita[] = [];
 
+  countD = 0;
+  countR = 0;
+
+  quantidadeDe() {
+    for (let i = 0; i < this.despesa.length; i++) {
+      this.countD = i + 1;
+    }
+    return this.countD;
+  }
+
+  quantidadeRe() {
+    for (let i = 0; i < this.despesa.length; i++) {
+      this.countR = i + 1;
+    }
+    return this.countR;
+  }
+
   getMax() {
     return Math.max.apply(
       Math,

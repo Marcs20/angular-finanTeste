@@ -20,6 +20,15 @@ export class MostrarreceitaComponent implements OnInit {
     });
   }
 
+  count = 0
+
+  quantidade() {
+    for (let i = 0; i < this.lancamento.length; i++) {
+      this.count = i +1
+    }
+    return this.count;
+  }
+
   getSum() {
     let n = 0;
     for (let i = 0; i < this.lancamento.length; i++) {

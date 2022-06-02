@@ -1,6 +1,19 @@
 h1 {
   text-align: center;
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex > div {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
 .box1 {
   background-color: rgb(245, 243, 241);
   text-align: center;
@@ -14,4 +27,5 @@ h1 {
 
 .res {
   background-color: rgb(231, 233, 232);
+  color: red;
 }
