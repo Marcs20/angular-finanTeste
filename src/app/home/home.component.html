@@ -9,22 +9,25 @@
 
 <h2 class="text-center">O que fazer ?</h2>
 
-<div class="d-flex flex-row mb-3">
-  <a class="nav-link" [routerLink]="['/mostrar']">
-    <div class="p-2">
-      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <b>Tenho gastos</b> | <i class="bi bi-coin"></i>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Registre seus gastos</h5>
-          <p class="card-text">
-            Começe a registrar seus gastos, com compras, contas e outros.
-          </p>
+<section class="flex">
+  <div>
+    <a class="nav-link" [routerLink]="['/mostrar']">
+      <div class="p-2">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <b>Tenho gastos</b> | <i class="bi bi-coin"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Registre seus gastos</h5>
+            <p class="card-text">
+              Começe a registrar seus gastos, com compras, contas e outros.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
+  <div>
   <a class="nav-link" [routerLink]="['/mostrarreceita']">
     <div class="p-2">
       <div class="card text-bg-light mb-3" style="max-width: 18rem;">
@@ -41,16 +44,39 @@
       </div>
     </div>
   </a>
+  </div>
   <div class="p-2">
     <div class="card text-bg-light mb-3" style="max-width: 18rem;">
       <div class="card-header"><b>Consultas</b></div>
       <div class="card-body">
-        <h5 class="card-title">Use as calculadoras, ver resumo dos gastos</h5>
+        <h5 class="card-title">Use as calculadoras</h5>
         <p class="card-text">
           Use as calculadoras de juros simples e compsotos, saiba quanto seu
-          investimento rende e veja um resumo das despesas e receitas.
+          investimento rende.
         </p>
       </div>
     </div>
   </div>
+  <div class="p-2">
+  <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header"><b>Informe-se</b></div>
+    <div class="card-body">
+      <h5 class="card-title">Cotação das moedas</h5>
+      <p class="card-text">
+        Acopanhe as cotações do Euro, Dólar e Crypto moeda
+      </p>
+    </div>
+  </div>
 </div>
+  <div class="p-2">
+    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header"><b>Verificar e analisar</b></div>
+      <div class="card-body">
+        <h5 class="card-title">Resumo dos gastos</h5>
+        <p class="card-text">
+          veja um resumo das despesas e receitas registradas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
