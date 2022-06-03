@@ -27,6 +27,7 @@ import { RegistrationService } from './service/registration.service';
 import { AuthGdGuard } from './guards/auth-gd.guard';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { RentInvComponent } from './calculadoras/rent-inv/rent-inv.component';
+import { RentPouComponent } from './calculadoras/rent-pou/rent-pou.component';
 
 @NgModule({
   imports: [
@@ -91,11 +92,15 @@ import { RentInvComponent } from './calculadoras/rent-inv/rent-inv.component';
         canActivate: [AuthGdGuard],
       },
       {
+        path: 'rentpou',
+        component: RentPouComponent,
+        canActivate: [AuthGdGuard],
+      },
+      {
         path: 'relatorio',
         component: RelatorioComponent,
         canActivate: [AuthGdGuard],
       },
-
       {
         path: 'navbar',
         component: NavbarComponent,
