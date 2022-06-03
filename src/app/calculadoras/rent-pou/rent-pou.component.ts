@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class RentPouComponent implements OnInit {
   constructor() {}
 
-  c;
-  i;
-  r;
-  t;
-  s;
+  c = 0;
+  i = 0;
+  r = 0;
+  t = 0;
+  s = 0;
 
   getJurosComp() {
     let list: number[] = [];
