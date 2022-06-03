@@ -129,6 +129,7 @@ import { RentPouComponent } from './calculadoras/rent-pou/rent-pou.component';
     RegistrationComponent,
     RelatorioComponent,
     RentInvComponent,
+    RentPouComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
